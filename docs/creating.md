@@ -105,6 +105,10 @@ suitable to [autoupdate your project safely][the-copier-answersyml-file]:
 
 Furthermore, the following keys are added:
 
+#### `_copier_conf.os`
+
+The detected Operating System, either `linux`, `macos`, `windows` or `None`.
+
 #### `_copier_conf.sep`
 
 The Operating System-specific directory separator.
@@ -112,6 +116,14 @@ The Operating System-specific directory separator.
 #### `_copier_conf.vcs_ref_hash`
 
 The current commit hash from the template.
+
+### `_copier_python`
+
+The absolute path of the Python interpreter running Copier.
+
+### `_folder_name`
+
+The name of the project root directory.
 
 ## Variables (context-dependent)
 
@@ -122,3 +134,9 @@ Some variables are only available in select contexts:
 The current operation, either `copy` or `update`.
 
 Availability: [`exclude`](configuring.md#exclude), [`tasks`](configuring.md#tasks)
+
+## Variables (context-specific)
+
+Some rendering contexts provide variables unique to them:
+
+-   [`migrations`](configuring.md#migrations)
